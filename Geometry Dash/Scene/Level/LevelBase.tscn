@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Scene/Level/LevelBase.gd" type="Script" id=1]
 [ext_resource path="res://Assets/bg.png" type="Texture" id=2]
-[ext_resource path="res://Scene/Hero/Hero.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/CamHelper/CamHelper.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scene/Tiles/Neos.tres" type="TileSet" id=5]
+[ext_resource path="res://Scene/Floor/Neos.tres" type="TileSet" id=5]
 [ext_resource path="res://Scene/Obstacles/SpikeNeon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/Trampoline/Trampoline.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scene/GravityChanger/GravityChanger.tscn" type="PackedScene" id=8]
@@ -42,9 +42,6 @@ self_modulate = Color( 0.488281, 0.270844, 0.270844, 1 )
 position = Vector2( -40, 496 )
 scale = Vector2( 2, 1 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
 margin_left = -493.0
@@ -53,18 +50,18 @@ margin_right = 533.0
 margin_bottom = 510.0
 color = Color( 0, 0.392157, 0.85098, 0.666667 )
 
-[node name="Hero" parent="." instance=ExtResource( 3 )]
+[node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( -32, 528 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="CamHelper" parent="." instance=ExtResource( 4 )]
 visible = false
 position = Vector2( -32, 520 )
-target_path = NodePath("../Hero")
+target_path = NodePath("../Player")
 
-[node name="Tiles" type="Node2D" parent="."]
+[node name="Floor" type="Node2D" parent="."]
 
-[node name="neon" type="TileMap" parent="Tiles" groups=["tiles"]]
+[node name="neon" type="TileMap" parent="Floor" groups=["tiles"]]
 tile_set = ExtResource( 5 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -374,13 +371,13 @@ new_intensity = 1.0
 [node name="TriggerHeroState2" parent="Triggers/TriggerHeroState" instance=ExtResource( 14 )]
 position = Vector2( 5200, 117 )
 scale = Vector2( 2.5, 1 )
-target_path = NodePath("../../../Hero")
+target_path = NodePath("../../../Player")
 new_state = "standard"
 
 [node name="TriggerHeroState3" parent="Triggers/TriggerHeroState" instance=ExtResource( 14 )]
 position = Vector2( 6517, 449 )
 scale = Vector2( 0.625, 2.5625 )
-target_path = NodePath("../../../Hero")
+target_path = NodePath("../../../Player")
 new_state = "flappy"
 
 [node name="TriggerTeleport" type="Node2D" parent="Triggers"]
@@ -400,7 +397,7 @@ margin_top = 448.0
 margin_right = 68.0
 margin_bottom = 471.0
 theme = SubResource( 2 )
-text = "Attempt 666"
+text = "Attempt 0"
 align = 2
 valign = 1
 uppercase = true
@@ -428,4 +425,4 @@ position = Vector2( 1164.75, 515 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Area2D" to="Hero" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_Area2D_body_entered"]

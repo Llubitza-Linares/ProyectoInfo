@@ -6,13 +6,13 @@ func stop_music():
 	$music.stop()
 
 func _ready():
-	$Hero.connect("died", self, "_on_hero_die")
-	$Hero.connect("die_timer", self, "_on_hero_die_timer")
+	$Player.connect("died", self, "_on_hero_die")
+	$Player.connect("die_timer", self, "_on_hero_die_timer")
 
 	$Attempt.text = ATTEMPT + String(globals.level_attemps)
 	$Win.hide()
 func _physics_process(delta):
-	$Background.position.x = $Hero.position.x
+	$Background.position.x = $Player.position.x
 
 func _on_hero_die():
 	globals.level_attemps += 1

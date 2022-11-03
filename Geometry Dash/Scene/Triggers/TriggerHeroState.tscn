@@ -17,7 +17,6 @@ func _on__TriggerBase_body_entered(body):
 
 [node name="TriggerHeroState" instance=ExtResource( 1 )]
 script = SubResource( 1 )
-target_path = NodePath("")
 new_state = ""
 
 [node name="Label" parent="." index="1"]
