@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GD Clone"
-run/main_scene="res://Objects/Level/LevelBase.tscn"
+run/main_scene="res://Scene/Level/LevelBase.tscn"
 config/icon="res://icon.png"
 
 [autoload]
