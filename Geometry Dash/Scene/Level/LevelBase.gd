@@ -10,7 +10,6 @@ func _ready():
 	$Player.connect("die_timer", self, "_on_hero_die_timer")
 
 	$Attempt.text = ATTEMPT + String(globals.level_attemps)
-	$Win.hide()
 func _physics_process(delta):
 	$Background.position.x = $Player.position.x
 
