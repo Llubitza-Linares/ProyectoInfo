@@ -408,12 +408,23 @@ volume_db = -44.571
 autoplay = true
 
 [node name="Win" type="Label" parent="."]
-margin_left = 7716.0
-margin_top = 496.0
-margin_right = 7848.0
-margin_bottom = 552.0
+margin_left = 7697.0
+margin_top = 438.0
+margin_right = 7829.0
+margin_bottom = 494.0
 custom_fonts/font = SubResource( 3 )
 text = "You Win!"
+align = 1
+valign = 1
+
+[node name="Reiniciar" type="Label" parent="."]
+margin_left = 7610.0
+margin_top = 362.0
+margin_right = 7843.0
+margin_bottom = 414.0
+custom_fonts/font = SubResource( 3 )
+text = "Preciona R para 
+comenzar de nuevo"
 align = 1
 valign = 1
 
