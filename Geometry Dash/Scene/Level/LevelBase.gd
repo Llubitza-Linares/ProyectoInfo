@@ -11,9 +11,8 @@ func _ready():
 
 	$Attempt.text = ATTEMPT + String(globals.level_attemps)
 	$Win.hide()
-
 func _physics_process(delta):
-	$cloud1.position.x = $Hero.position.x
+	$Background.position.x = $Hero.position.x
 
 func _on_hero_die():
 	globals.level_attemps += 1
@@ -23,5 +22,3 @@ func _on_hero_die_timer():
 	get_tree().reload_current_scene()
 
 
-func _on_Area2D_body_entered(body):
-	$Win.show()

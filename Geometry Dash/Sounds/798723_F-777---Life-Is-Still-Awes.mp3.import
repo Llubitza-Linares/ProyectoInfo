@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/798723_F-777---Life-Is-Still-Awes.mp3-e4dfb9f7397270bc157b1e16e7c8f065.mp3str"
+
+[deps]
+
+source_file="res://Sounds/798723_F-777---Life-Is-Still-Awes.mp3"
+dest_files=[ "res://.import/798723_F-777---Life-Is-Still-Awes.mp3-e4dfb9f7397270bc157b1e16e7c8f065.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

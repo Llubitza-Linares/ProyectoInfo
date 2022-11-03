@@ -31,13 +31,11 @@ func enter(host):
 
 func handle_input(host, event):
 	if event.is_action_pressed("move_jump"):
-#		host.get_node("Rays/RayLeft").cast_to = Vector2(-8, 0)
-#		host.get_node("Rays/RayRight").cast_to = Vector2(8, 0)
+
 		key_maps.jump = true
 
 	if event.is_action_released("move_jump"):
-#		host.get_node("Rays/RayLeft").cast_to = Vector2(-4, 0)
-#		host.get_node("Rays/RayRight").cast_to = Vector2(4, 0)
+
 		key_maps.jump = false
 
 	return

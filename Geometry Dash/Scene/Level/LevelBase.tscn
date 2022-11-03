@@ -11,8 +11,8 @@
 [ext_resource path="res://Scene/Triggers/TriggerScreenInvert.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/Triggers/TriggerHeroState.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/Triggers/TriggerTeleport.tscn" type="PackedScene" id=15]
-[ext_resource path="res://font/Ubuntu-R.ttf" type="DynamicFontData" id=17]
-[ext_resource path="res://bgm/798723_F-777---Life-Is-Still-Awes.ogg" type="AudioStream" id=18]
+[ext_resource path="res://Font/Ubuntu-R.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://Sounds/798723_F-777---Life-Is-Still-Awes.ogg" type="AudioStream" id=18]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -36,7 +36,7 @@ extents = Vector2( 70.75, 35 )
 [node name="LevelBase" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="cloud1" type="Sprite" parent="."]
+[node name="Background" type="Sprite" parent="."]
 modulate = Color( 0.665405, 0.925781, 0.901371, 1 )
 self_modulate = Color( 0.488281, 0.270844, 0.270844, 1 )
 position = Vector2( -40, 496 )
@@ -46,7 +46,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ColorRect" type="ColorRect" parent="cloud1"]
+[node name="ColorRect" type="ColorRect" parent="Background"]
 margin_left = -493.0
 margin_top = -514.0
 margin_right = 533.0
@@ -428,3 +428,4 @@ position = Vector2( 1164.75, 515 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Hero" method="_on_Area2D_body_entered"]

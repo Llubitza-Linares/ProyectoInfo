@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/798723_F-777---Life-Is-Still-Awes.ogg-c74e0db8897249b7000a9c878c2ba350.oggstr"
+
+[deps]
+
+source_file="res://Sounds/798723_F-777---Life-Is-Still-Awes.ogg"
+dest_files=[ "res://.import/798723_F-777---Life-Is-Still-Awes.ogg-c74e0db8897249b7000a9c878c2ba350.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
